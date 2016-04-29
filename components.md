@@ -120,7 +120,9 @@ Dumb components are very easy to reason about and can mostly be ignored in the t
 
 ## Best practices
 ### Draw them first, think responsability first
+Since components represent the complete presentationlayer of your application it's important to think about the structure of these components. It's also a good idea to think about what components should dumb and smart before you start writing the application. For that reason I suggest you take a piece of paper or use a whiteboard and start drawing the componenttree for every page. This gives you the ability to start thinking about which state belongs to which component.
 ### Keep them small
+
 ### Strict rules regarding communication
 ### Keep them dumb
 
