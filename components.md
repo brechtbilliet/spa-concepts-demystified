@@ -119,12 +119,13 @@ Dumb components are very easy to reason about and can mostly be ignored in the t
 </ul>
 
 ## Best practices
-### Draw them first, think responsability first
+### Draw them first, think about the responsabilities first
 Since components represent the complete presentationlayer of your application it's important to think about the structure of these components. It's also a good idea to think about what components should dumb and smart before you start writing the application. For that reason I suggest you take a piece of paper or use a whiteboard and start drawing the componenttree for every page. This gives you the ability to start thinking about which state belongs to which component.
 ### Keep them small
 When you keep your components small, you get the following advantages:
 <ul>
 	<li>Small components are easier to work with. The smaller your code, the easier you get an overview of what the component does</li>
+	<li>Easier to maintain</li>
 	<li>It makes it easier to work with the "single-responsability-principle" (small components with small responsabilities).</li>
 	<li>Because of the "single-responsability-principle" it becomes easier to test</li>
 	<li>Easier to debug</li>
@@ -132,6 +133,15 @@ When you keep your components small, you get the following advantages:
 	<li>Split up into different developer tasks. (developers can work sandboxed on their own set of components)</li>
 	<li>Component names in an application create somekind of developer jargon</li>
 </ul>
+### Don't let components talk directly with the rest of the application
+If you have read the rest of this chapter, you should know that this section does not apply to dumb components, since they don't interfere with the rest of the application. They only interfere with there direct parent's and direct children.
+Containers (smart components) do know about the application, but that doesn't mean they should have access to everything. 
+
+It's a good idea to **provide some kind of abstraction layer** for your containers. That way the presentation-layer (component-tree) is loosely-coupled from the rest of the application.
+If you think about it, the containers should not know how statemanagement is handled, nor should they know how data is being fetched/handled. And in software, the less a component knows, the easier it gets to manage that component.
+
+An option would be to provide some kind of sandbox that only contains the properties of the state that your container needs. The sandbox would also contain the functions your container needs to modify state and or communicate with the backend. You want to keep this abstraction thin, and keep the logic of your container in the container itself. After all, it is its responsability right?
 ### Strict rules regarding communication
+Components shouldn't communicate with siblings
 ### Keep them dumb
 
