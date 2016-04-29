@@ -122,7 +122,16 @@ Dumb components are very easy to reason about and can mostly be ignored in the t
 ### Draw them first, think responsability first
 Since components represent the complete presentationlayer of your application it's important to think about the structure of these components. It's also a good idea to think about what components should dumb and smart before you start writing the application. For that reason I suggest you take a piece of paper or use a whiteboard and start drawing the componenttree for every page. This gives you the ability to start thinking about which state belongs to which component.
 ### Keep them small
-
+When you keep your components small, you get the following advantages:
+<ul>
+	<li>Small components are easier to work with. The smaller your code, the easier you get an overview of what the component does</li>
+	<li>It makes it easier to work with the "single-responsability-principle" (small components with small responsabilities).</li>
+	<li>Because of the "single-responsability-principle" it becomes easier to test</li>
+	<li>Easier to debug</li>
+	<li>You have more control over the change detection in some frameworks (only rerender what needs to be rerendered)</li>
+	<li>Split up into different developer tasks. (developers can work sandboxed on their own set of components)</li>
+	<li>Component names in an application create somekind of developer jargon</li>
+</ul>
 ### Strict rules regarding communication
 ### Keep them dumb
 
