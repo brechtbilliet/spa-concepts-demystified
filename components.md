@@ -2,6 +2,14 @@
 ## Foreword
 The concept 'Components' is one of the most commonly used concepts these days in SPA applications. The concept itself exists for a while now, but since React (SPA-framework from Facebook) became popular, most SPA-frameworks are based on this concept.
 
+## Table of Contents
+
+  1. [Base concept](#base-concept)
+  1. [The hierarchical component-tree](#the-hierarchical-component-tree)
+  1. [Smart vs dumb components](#smart-vs-dumb-components)
+  2. [Best practices](#best-practices)
+
+
 ## Base concept
 In essence, a component is a tiny part of a bigger picture, a part of an application for instance. The term 'component' is something that is used quite commonly, but when we talk about components in SPA technologies, a component is something very specific.
 
@@ -157,3 +165,12 @@ A majority of dumb components has the following advantages:
 	<li>Dumb components are easier to test (less dependencies)</li>
 </ul>
 ### keep your templates inline
+Keep the html of the component in the same file of the javascript.
+Wait, what?! What about separation of concerns? Actually it is the concern of the component to fulfill its purpose. The component fulfills that purpose by the combination of his html and javascript.
+When you put them in the same file there are some advantages:
+<ul>
+<li>Less context switching when developing the component (don't switch between files)
+<li>No absolute paths to templates that are hard to maintain</li>
+<li>Less ajax calls to fetch templates, there already there when bootstrapping the application</li>
+</ul>
+**Note:** This only applies when the component isn't to big, but than again... keep them small remember.
