@@ -1,6 +1,6 @@
 # Components demystified
 ## Foreword
-The concept 'Components' is one of the most commonly used concepts these days in SPA frameworks. The concept itself exists for a long time now, but since React (SPA-framework from Facebook) became popular most SPA-frameworks are based on this concept.
+The concept 'Components' is one of the most commonly used concepts these days in SPA applications. The concept itself exists for a while now, but since React (SPA-framework from Facebook) became popular, most SPA-frameworks are based on this concept.
 
 ## Base concept
 In essence, a component is a tiny part of a bigger picture, a part of an application for instance. The term 'component' is something that is used quite commonly, but when we talk about components in SPA technologies, a component is something very specific.
@@ -142,6 +142,18 @@ If you think about it, the containers should not know how statemanagement is han
 
 An option would be to provide some kind of sandbox that only contains the properties of the state that your container needs. The sandbox would also contain the functions your container needs to modify state and or communicate with the backend. You want to keep this abstraction thin, and keep the logic of your container in the container itself. After all, it is its responsability right?
 ### Strict rules regarding communication
-Components shouldn't communicate with siblings
-### Keep them dumb
+A dumb component should only communicate with its direct parent-component and with its own child-components.
+This rule also applies for smart components, however a smart component has somekind of api to communicate with the rest of the application. That's what makes it smart.
 
+The big advantage here is that you don't have to keep track of who notifies who. There is a strict structure here.
+### Keep your components dumb where possible
+The more dumb components your application has, the easier it gets to maintain that application.
+A majority of dumb components has the following advantages:
+<ul>
+	<li>Less smart components results in less application abstractions (every container needs its own api to the application</li>
+	<li>Dumb components are much easier to reason about</li>
+	<li>Dumb components makes the application less complex, since dumb components do not modify state/data</li>
+	<li>It's easier to give dumb components a clear responsability</li>
+	<li>Dumb components are easier to test (less dependencies)</li>
+</ul>
+### keep your templates inline
