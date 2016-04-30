@@ -1,16 +1,20 @@
 # Components demystified
-## Foreword
-The concept 'Components' is one of the most commonly used concepts these days in SPA applications. The concept itself exists for a while now, but since React (SPA-framework from Facebook) became popular, most SPA-frameworks are based on this concept.
 
 ## Table of Contents
 
+  1. [Foreword](#foreword)
   1. [Base concept](#base-concept)
   1. [The hierarchical component-tree](#the-hierarchical-component-tree)
   1. [Smart vs dumb components](#smart-vs-dumb-components)
-  2. [Best practices](#best-practices)
+  1. [Best practices](#best-practices)
 
+## Foreword
+These documents are the beginning of a book (or a collection of documents) that will explain SPA-principles in depth. SPA's (single-page-apps) offer us the opportunity to create responsive userfriendly webapplications that have a native look-and-feel. However, with great power comes great responsability! It's not always easy to manage those SPA's when they tend to get big, and most of the time... they will! When applying the principles of 'spa concepts demystified' you should be able to create large-scale applications like it's 'a walk in the park'.
 
+This module will demystify components and explain why certain choices were made.
 ## Base concept
+The concept 'Components' is one of the most commonly used concepts these days in SPA applications. The concept itself exists for a while now, but since React (SPA-framework from Facebook) became popular, most SPA-frameworks are based on this concept.
+
 In essence, a component is a tiny part of a bigger picture, a part of an application for instance. The term 'component' is something that is used quite commonly, but when we talk about components in SPA technologies, a component is something very specific.
 
 **It's the combination of a piece of HTML and a piece of logic, that serve a special purpose together.**
