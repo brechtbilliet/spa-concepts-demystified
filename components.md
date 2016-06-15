@@ -58,7 +58,7 @@ Let's take a look at the native **anchor-tag** for instance:
   <dd>When we hover a star it can highlight the star, so the user will know he can click it.</dd>
 </dl>
 
-Single page applications will mostly render additional HTML for custom components. The component below might output something like this:
+Single page applications will mostly render additional HTML for custom components. The component above might output something like this:
 
 ```html
 	<rating>
